@@ -19,31 +19,44 @@ struct ContentView: View {
         ZStack {
             LinearGradient(colors: [.blue, .black], startPoint: .top, endPoint: .bottom)
             .ignoresSafeArea()
-            VStack(spacing: 30) {
-                VStack {
-                    Text("Tap the flag of")
-                        .foregroundColor(.white)
-                        .font(.subheadline.weight(.heavy))
-                    Text(countries[correctAnswer])
-                        .foregroundColor(.white)
-                        .font(.largeTitle.weight(.bold))
-                }
-                .padding()
-                
-                ForEach(0..<3) { number in
-                    Button {
-                        flagTapped(number)
-                    } label: {
-                        Image(countries[number])
-                            .renderingMode(.original)
-                            .clipShape(Capsule())
-                            .shadow(radius: 5)
+            VStack {
+                Text("Guess the flag")
+                    .foregroundColor(.white)
+                    .font(.largeTitle.weight(.bold))
+                    .textCase(.uppercase)
+
+                VStack(spacing: 30) {
+                    VStack {
+                        Text("Tap the flag of")
+                            .foregroundColor(.white)
+                            .font(.subheadline.weight(.heavy))
+                        Text(countries[correctAnswer])
+                            .foregroundColor(.white)
+                            .font(.largeTitle.weight(.bold))
                     }
-                }
-            }.frame(maxWidth: .infinity)
-                .padding(.vertical, 20)
-                .background(.regularMaterial)
-                .cornerRadius(20)
+                    .padding()
+                    
+                    ForEach(0..<3) { number in
+                        Button {
+                            flagTapped(number)
+                        } label: {
+                            Image(countries[number])
+                                .renderingMode(.original)
+                                .clipShape(Capsule())
+                                .shadow(radius: 5)
+                        }
+                    }
+                }.frame(maxWidth: .infinity)
+                    .padding(.vertical, 20)
+                    .background(.regularMaterial)
+                    .cornerRadius(20)
+                
+                Text("Your Score is: \(score)")
+                    .foregroundColor(.white)
+                    .padding(.top, 20)
+                    .font(.headline.weight(.bold))
+            }
+            
         }.alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
