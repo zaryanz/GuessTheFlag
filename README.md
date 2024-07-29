@@ -1,6 +1,5 @@
-<h3 align="center">
+<h2>
   GuessTheFlag
-</h3>
+</h2>
 
-<img alt="Animation of GuessTheFlag game demo" src="https://github.com/user-attachments/assets/46a06769-f965-4179-84bd-b29bded11bb3" />
-
+![GuessTheFlagDemo](https://github.com/user-attachments/assets/1fd756ee-75b0-413e-8827-748cfac6f882)
