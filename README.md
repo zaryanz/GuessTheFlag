@@ -6,7 +6,8 @@ You'll be shown a country from around the globe and challenged to identify its f
 <table>
   <tr>
     <td>
-      <img alt="GuessTheFlag demo animation" width="401" height="870" src="https://github.com/user-attachments/assets/1fd756ee-75b0-413e-8827-748cfac6f882" />
+      <video alt="GuessTheFlag demo animation" width="401" height="870" src="https://github.com/user-attachments/assets/92123f0f-6ff5-4e48-aeb6-6ebfebed1653" />
     </td>
   </tr>
 </table>
+
